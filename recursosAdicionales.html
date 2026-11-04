@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos Adicionales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark"">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="img/logo1.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Transporte
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="MediosBus.html">Transporte Terrestre Bus</a></li>
+                <li><a class="dropdown-item" href="MediosTaxis.html">Transporte Terrestre Taxis</a></li>
+                <li><a class="dropdown-item" href="MediosTren.html">Transporte Terrestre Tren</a></li>
+                <li><a class="dropdown-item" href="transporteAcuatico.html">Transporte Marítimo</a></li>
+                <li><a class="dropdown-item" href="aereo.html">Transporte Aéreo</a></li>
+              </ul>
+            <!-- prueba incia -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownS" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="MEdiosRentacard.html">Rent a Car</a></li>
+                <li><a class="dropdown-item" href="alquilerAcuatico.html">Deporte Acuático y recreación</a></li> 
+                <li><a class="dropdown-item" href="hospedaje.html">Hospedaje</a></li>
+                <li><a class="dropdown-item" href="tour.html">Tours</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="recomendacciones.html">Recomendaciones</a></li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="recursosAdicionales.html">Recursos Adicionales</a>
+            </li>
+            <!-- prueba termina -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Versión 25.8.3</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <a href="Register.html"><button class="btn btn-outline-success" type="button">Registrar</button></a>
+            <a href="login.html"><button class="btn btn-outline-success" type="button">Login</button></a>
+          </form>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <main>
+      <br /><br><br><br>
+
+      <section id="preguntas-frecuentes" class="my-5">
+        <div class="container">
+            <h3 class="text-center text-light">Preguntas Frecuentes</h3>
+            <div class="accordion" id="faqAccordion">
+                <!-- Pregunta 1 -->
+                <div class="card">
+                    <div class="card-header" id="heading1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse1"
+                                    aria-expanded="true" aria-controls="collapse1">
+                                ¿Cuál es la mejor época para visitar Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            La temporada seca, de diciembre a abril, es la época más popular para visitar Costa Rica debido a su clima agradable. Sin embargo, la temporada verde, de mayo a noviembre, ofrece paisajes exuberantes y menos turistas.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 2 -->
+                <div class="card">
+                    <div class="card-header" id="heading2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse2"
+                                    aria-expanded="false" aria-controls="collapse2">
+                                ¿Necesito una visa para ingresar a Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            La mayoría de los visitantes no necesitan visa si su estadía es inferior a 90 días. Sin embargo, verifica los requisitos específicos según tu nacionalidad.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 3 -->
+                <div class="card">
+                    <div class="card-header" id="heading3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse3"
+                                    aria-expanded="false" aria-controls="collapse3">
+                                ¿Qué vacunas se requieren para viajar a Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Las vacunas no son obligatorias, pero se recomienda estar al día con las vacunas contra tétanos, hepatitis A y B, y consultar con un profesional de la salud sobre las recomendaciones específicas para tu viaje.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 4 -->
+                <div class="card">
+                    <div class="card-header" id="heading4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse4"
+                                    aria-expanded="false" aria-controls="collapse4">
+                                ¿Es seguro viajar en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Costa Rica es generalmente un destino seguro para los turistas, pero como en cualquier lugar, es importante tomar precauciones básicas como cuidar tus pertenencias y mantenerse informado sobre las áreas seguras.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 5 -->
+                <div class="card">
+                    <div class="card-header" id="heading5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse5"
+                                    aria-expanded="false" aria-controls="collapse5">
+                                ¿Cuáles son las opciones de hospedaje en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Costa Rica ofrece una amplia variedad de opciones de hospedaje, desde hoteles y resorts de lujo hasta hostales económicos, cabañas en la selva y alojamientos en casas de familia.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 6 -->
+                <div class="card">
+                    <div class="card-header" id="heading6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse6"
+                                    aria-expanded="false" aria-controls="collapse6">
+                                ¿Es recomendable reservar el hospedaje con anticipación?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Reservar con anticipación es aconsejable, especialmente durante la temporada alta. Esto garantiza disponibilidad y a menudo puedes encontrar mejores precios.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 7 -->
+                <div class="card">
+                    <div class="card-header" id="heading7">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse7"
+                                    aria-expanded="false" aria-controls="collapse7">
+                                ¿Cuáles son las áreas populares para hospedarse en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            San José (la capital), La Fortuna (cerca del volcán Arenal), Guanacaste (playas), Manuel Antonio (parque nacional) y Monteverde (reserva de bosque nuboso) son áreas populares para hospedarse.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 8 -->
+                <div class="card">
+                    <div class="card-header" id="heading8">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse8"
+                                    aria-expanded="false" aria-controls="collapse8">
+                                ¿Es seguro el hospedaje en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            La mayoría de los lugares de hospedaje en Costa Rica son seguros. Sin embargo, es importante tomar precauciones normales y seguir las indicaciones de seguridad proporcionadas por el personal del alojamiento.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 9 -->
+                <div class="card">
+                    <div class="card-header" id="heading9">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse9"
+                                    aria-expanded="false" aria-controls="collapse9">
+                                ¿Cuáles son las opciones de transporte en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Las opciones de transporte incluyen autobuses, taxis, alquiler de automóviles, trenes y vuelos internos. También hay servicios de transporte compartido y traslados privados.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 10 -->
+                <div class="card">
+                    <div class="card-header" id="heading10">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse10"
+                                    aria-expanded="false" aria-controls="collapse10">
+                                ¿Es fácil moverse en Costa Rica sin un automóvil de alquiler?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Sí, es posible moverse en transporte público y utilizar servicios de taxi y transporte compartido, especialmente en áreas turísticas. Sin embargo, un automóvil de alquiler puede brindar más flexibilidad para explorar zonas remotas.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 11 -->
+                <div class="card">
+                    <div class="card-header" id="heading11">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse11"
+                                    aria-expanded="false" aria-controls="collapse11">
+                                ¿Qué debo saber sobre la conducción en Costa Rica?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Conducir en Costa Rica puede ser desafiante debido a las condiciones del camino y al tráfico en algunas áreas urbanas. Es importante conocer las reglas de tránsito y tener precaución en carreteras montañosas.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pregunta 12 -->
+                <div class="card">
+                    <div class="card-header" id="heading12">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link pregunta" type="button" data-toggle="collapse" data-target="#collapse12"
+                                    aria-expanded="false" aria-controls="collapse12">
+                                ¿Cuáles son las aerolíneas locales para vuelos internos?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Algunas aerolíneas locales en Costa Rica incluyen Nature Air y Sansa. Los vuelos internos son una opción conveniente para llegar a destinos alejados más rápidamente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <br />
+      <div class="social-banner">
+        <a href="https://www.facebook.com/" class="social-icon"
+          ><img src="img/Facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/" class="social-icon"
+          ><img src="img/Instagram.png" alt="Instagram"
+        /></a>
+        <a href="https://www.tiktok.com/es/" class="social-icon"
+          ><img src="img/Tik Tok.png" alt="TikTok"
+        /></a>
+        <a href="https://www.youtube.com/" class="social-icon"
+          ><img src="img/Youtube.png" alt="YouTube"
+        /></a>
+      </div>
+    </main>
+
+      <!-- ── Footer Unificado Glassmorphic ─────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo1.png" alt="Let's Go" height="38" class="me-2">
+            <h3 class="mb-0" style="color: var(--btn-espresso) !important; font-weight: 800;">Let's Go Puntarenas</h3>
+          </div>
+          <p>
+            Tu plataforma de referencia para conocer los mejores medios de transporte, hospedajes y aventuras en la provincia de Puntarenas y el Pacífico de Costa Rica.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h3>Transporte</h3>
+          <ul class="list-unstyled">
+            <li><a href="MediosBus.html"><i class="fas fa-bus text-warning me-1"></i> Autobuses</a></li>
+            <li><a href="MediosTaxis.html"><i class="fas fa-taxi text-warning me-1"></i> Taxis</a></li>
+            <li><a href="transporteAcuatico.html"><i class="fas fa-ship text-primary me-1"></i> Ferries</a></li>
+            <li><a href="MediosTren.html"><i class="fas fa-train text-info me-1"></i> Tren</a></li>
+            <li><a href="aereo.html"><i class="fas fa-plane text-danger me-1"></i> Aéreo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h3>Servicios</h3>
+          <ul class="list-unstyled">
+            <li><a href="MEdiosRentacard.html"><i class="fas fa-car text-primary me-1"></i> Rent a Car</a></li>
+            <li><a href="hospedaje.html"><i class="fas fa-hotel text-success me-1"></i> Hospedajes</a></li>
+            <li><a href="tour.html"><i class="fas fa-umbrella-beach text-warning me-1"></i> Tours y Giras</a></li>
+            <li><a href="alquilerAcuatico.html"><i class="fas fa-water text-info me-1"></i> Deporte Acuático</a></li>
+            <li><a href="recomendacciones.html"><i class="fas fa-star text-warning me-1"></i> Recomendaciones</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3>Contacto & Ubicación</h3>
+          <p class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2"></i>Paseo de los Turistas, Puntarenas, Costa Rica</p>
+          <p class="mb-2"><i class="fas fa-envelope text-info me-2"></i><a href="mailto:info@letsgo.cr">info@letsgo.cr</a></p>
+          <p class="mb-3"><i class="fas fa-phone text-success me-2"></i><a href="tel:+50626610000">+506 2661-0000</a></p>
+          <p class="small text-muted mb-0">&copy; 2026 Let's Go Costa Rica. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"
+      ></script>
+  </body>
+</html>
+
+

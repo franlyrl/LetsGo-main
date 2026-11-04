@@ -1,0 +1,746 @@
+/* ==========================================================================
+   Let's Go - Guía Turística Puntarenas
+   Tema: Costa Dorada & Arena Clara (#CAC08C) con Botones Espresso (#382f32)
+   Glassmorphism Luminoso, Elegante y de Alta Gama (Resort Boutique)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Tono Arena Dorada / Coastal Sand */
+  --sand-gold: #CAC08C;
+  --sand-gold-light: #e4ddb8;
+  --sand-gold-dark: #a89d67;
+  --sand-gold-glow: rgba(202, 192, 140, 0.45);
+
+  /* Tono Solicitado para Botones: Espresso Sofisticado (#382f32) */
+  --btn-espresso: #382f32;
+  --btn-espresso-hover: #4a3e42;
+  --btn-espresso-glow: rgba(56, 47, 50, 0.32);
+  --btn-espresso-gradient: linear-gradient(135deg, #483d41 0%, #382f32 100%);
+
+  /* Fondo Luminoso Cálido */
+  --bg-light: #f7f5f0;
+  --bg-gradient: 
+    radial-gradient(circle at 85% 10%, rgba(202, 192, 140, 0.42) 0%, transparent 45%),
+    radial-gradient(circle at 10% 70%, rgba(202, 192, 140, 0.32) 0%, transparent 45%),
+    radial-gradient(circle at 50% 35%, rgba(56, 47, 50, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #faf8f5 0%, #f3eee3 100%);
+
+  /* Acentos de Apoyo */
+  --costa-orange: #c2410c;
+  --costa-green: #047857;
+  --costa-teal: #0891b2;
+
+  /* Glassmorphism en Fondo Claro */
+  --glass-bg: rgba(255, 255, 255, 0.76);
+  --glass-bg-hover: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(202, 192, 140, 0.55);
+  --glass-border-hover: rgba(56, 47, 50, 0.45);
+  --glass-shadow: 0 14px 35px -5px rgba(120, 105, 75, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --glass-blur: blur(24px) saturate(180%);
+
+  /* Tipografía */
+  --text-main: #382f32;         /* Espresso profundo */
+  --text-muted: #57534e;        /* Piedra suave */
+  --text-dim: #78716c;
+}
+
+/* ── Reset & Base Styles ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg-light);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+#bodyMedios, body {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ── Tipografía ──────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0 !important;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: transparent !important;
+  border: none !important;
+  color: var(--costa-green) !important;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--text-muted) !important;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--btn-espresso);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: var(--costa-orange);
+  text-decoration: none;
+}
+
+/* ── Header & Navbar Glass Mejorado ──────────────────────────────────────── */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background: transparent !important;
+  text-align: left;
+}
+
+.navbar {
+  background: rgba(250, 248, 243, 0.92) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1.5px solid rgba(202, 192, 140, 0.6);
+  padding: 0.85rem 2rem;
+  box-shadow: 0 4px 28px rgba(56, 47, 50, 0.08);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 44px;
+  width: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 2px 6px rgba(56, 47, 50, 0.2));
+}
+
+.brand-title {
+  color: var(--btn-espresso) !important;
+  letter-spacing: -0.03em;
+}
+
+.nav-link {
+  color: #443c3e !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.95rem !important;
+  border-radius: 10px;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link i {
+  color: #786c70;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--btn-espresso) !important;
+  background: rgba(202, 192, 140, 0.28);
+}
+
+.nav-link:hover i, .nav-link.active i {
+  color: var(--btn-espresso);
+}
+
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1.5px solid var(--sand-gold) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 40px rgba(56, 47, 50, 0.15);
+  padding: 0.65rem;
+}
+
+.dropdown-item {
+  color: #382f32 !important;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  padding: 0.55rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item i {
+  color: #786c70;
+  width: 20px;
+}
+
+.dropdown-item:hover {
+  background: rgba(202, 192, 140, 0.3) !important;
+  color: #1a1517 !important;
+  transform: translateX(4px);
+}
+
+.dropdown-divider {
+  border-color: rgba(202, 192, 140, 0.35) !important;
+}
+
+/* ── Layout Principal ────────────────────────────────────────────────────── */
+main {
+  padding: 125px 20px 60px 20px !important;
+  text-align: left !important;
+  min-height: calc(100vh - 200px);
+}
+
+.t, .top, .top1, .princi, .blockquote-footer, .mid1, .mid2, .mid3 {
+  margin: 0 !important;
+  margin-left: 0 !important;
+}
+
+.princi {
+  color: var(--text-main) !important;
+  font-size: 2.5rem !important;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, #382f32 0%, #1c1517 60%, #78350f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blockquote-footer {
+  color: var(--text-muted) !important;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+/* ── Contenedores Glassmorphism ─────────────────────────────────────────── */
+.container-medios,
+.container-medios-train,
+.Rentacar,
+.Registrostyle,
+.Taxis,
+.Tren-medio,
+.Bus,
+.card,
+.glass-panel {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1.5px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  color: var(--text-main) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-medios {
+  max-width: 1100px;
+  margin: 100px auto 40px auto !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.container-medios h3,
+.container-medios p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.flex-container-taxi,
+.flex-container-rentacar,
+.flex-container-medios {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.Taxis,
+.Rentacar,
+.Bus,
+.Tren-medio {
+  width: 100% !important;
+  max-width: 780px !important;
+  margin: 1.75rem auto !important;
+  text-align: center !important;
+}
+
+.Taxis:empty,
+.Rentacar:empty {
+  display: none !important;
+}
+
+.Rentacar:hover,
+.Registrostyle:hover,
+.Taxis:hover,
+.Tren-medio:hover,
+.Bus:hover,
+.card:hover {
+  background: var(--glass-bg-hover) !important;
+  border-color: var(--glass-border-hover) !important;
+  box-shadow: 0 20px 45px rgba(56, 47, 50, 0.16) !important;
+}
+
+.Rentacar h1, .Registrostyle h1, .Taxis h1, .Tren-medio h1,
+.Rentacar h3, .Registrostyle h3, .Taxis h3, .Tren-medio h3 {
+  color: var(--text-main) !important;
+  text-align: center !important;
+}
+
+.Rentacar p, .Registrostyle p, .Taxis p, .Tren-medio p {
+  color: var(--text-muted) !important;
+  font-size: 1rem !important;
+  text-align: center !important;
+}
+
+/* ── Centrado y Adaptabilidad de Mapas e Imágenes ────────────────────────── */
+iframe {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 400px !important;
+  border: 1.5px solid var(--sand-gold) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(56, 47, 50, 0.14) !important;
+}
+
+.table-img,
+.custom-image,
+.Bus img,
+.Taxis img,
+.Rentacar img,
+.card img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  max-height: 420px !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+  border: 1.5px solid rgba(202, 192, 140, 0.55) !important;
+  box-shadow: 0 10px 25px rgba(56, 47, 50, 0.12) !important;
+}
+
+/* ── Botones Protagonistas en Tono #382f32 ────────────────────────────────── */
+.btn,
+button,
+input[type="submit"] {
+  width: auto !important;
+  max-width: 260px;
+  min-width: 110px;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0.25rem 0.35rem;
+}
+
+.btn-sm {
+  min-width: 85px;
+  padding: 0.45rem 1rem !important;
+  font-size: 0.88rem !important;
+}
+
+.btn-primary,
+button.Registrarse,
+button.iniciar {
+  background: var(--btn-espresso) !important;
+  border: 1px solid rgba(202, 192, 140, 0.6) !important;
+  color: #faf8f5 !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 1.4rem !important;
+  box-shadow: 0 4px 18px var(--btn-espresso-glow) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-primary:hover,
+button.Registrarse:hover,
+button.iniciar:hover {
+  background: var(--btn-espresso-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  border-color: var(--sand-gold) !important;
+  box-shadow: 0 8px 25px rgba(56, 47, 50, 0.45) !important;
+}
+
+.btn-secondary,
+button.cancelar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1.5px solid var(--sand-gold) !important;
+  color: var(--btn-espresso) !important;
+  border-radius: 12px !important;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-secondary:hover,
+button.cancelar:hover {
+  background: var(--btn-espresso) !important;
+  color: #ffffff !important;
+  border-color: var(--btn-espresso) !important;
+}
+
+/* Botones de Redes Sociales (Facebook, Google) */
+button.facebook,
+.btn-primary.facebook {
+  background: #1877f2 !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0.6rem 1.1rem !important;
+  max-width: 220px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+button.google,
+.btn-danger.google {
+  background: #ea4335 !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0.6rem 1.1rem !important;
+  max-width: 220px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+.btn-outline-primary {
+  color: var(--btn-espresso) !important;
+  border: 1.5px solid var(--btn-espresso) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--btn-espresso) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px var(--btn-espresso-glow);
+}
+
+.btn-outline-success {
+  color: var(--costa-green) !important;
+  border: 1.5px solid rgba(4, 120, 87, 0.55) !important;
+  border-radius: 10px !important;
+  background: rgba(4, 120, 87, 0.06);
+  font-weight: 600;
+}
+
+.btn-outline-success:hover {
+  background: var(--costa-green) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 16px rgba(4, 120, 87, 0.25);
+}
+
+.btn-outline-danger {
+  color: #dc2626 !important;
+  border: 1.5px solid rgba(220, 38, 38, 0.45) !important;
+  border-radius: 10px !important;
+}
+
+.btn-outline-danger:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* ── Formularios e Inputs ────────────────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea,
+.form-control {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid rgba(202, 192, 140, 0.75) !important;
+  color: var(--text-main) !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a8a29e !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  background: #ffffff !important;
+  border-color: var(--btn-espresso) !important;
+  box-shadow: 0 0 0 3.5px rgba(56, 47, 50, 0.2) !important;
+  outline: none !important;
+}
+
+label {
+  color: var(--btn-espresso) !important;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* ── Tablas Elegantes con Arena Dorada ───────────────────────────────────── */
+table, .table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--sand-gold) !important;
+  background: rgba(255, 255, 255, 0.72);
+  margin-top: 1rem;
+}
+
+table th, .table th {
+  background: rgba(202, 192, 140, 0.45) !important;
+  color: var(--btn-espresso) !important;
+  padding: 14px 16px !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none !important;
+  border-bottom: 2px solid var(--sand-gold) !important;
+  text-align: left;
+}
+
+table td, .table td {
+  padding: 12px 16px !important;
+  color: #443c3e !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(202, 192, 140, 0.25) !important;
+  font-size: 0.9rem;
+}
+
+table tr:hover td, .table tr:hover td {
+  background: rgba(202, 192, 140, 0.2) !important;
+}
+
+#tituloTabla, #trasnAcua, #trasnFerry, #transAereo {
+  background: var(--btn-espresso) !important;
+  color: #ffffff !important;
+  padding: 16px !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ── Carrusel y Media ────────────────────────────────────────────────────── */
+.carousel {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(202, 192, 140, 0.65);
+  box-shadow: 0 16px 40px rgba(120, 105, 75, 0.16);
+}
+
+.carousel-item img {
+  border-radius: 18px;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+.carousel-caption {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(202, 192, 140, 0.65);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(56, 47, 50, 0.1);
+}
+
+.carousel-caption h5 {
+  color: var(--btn-espresso);
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  color: #57534e !important;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ── Modales Glass ───────────────────────────────────────────────────────── */
+.modal-content {
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1.5px solid var(--sand-gold) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 60px rgba(56, 47, 50, 0.25) !important;
+  color: var(--text-main) !important;
+}
+
+.modal-header {
+  border-bottom: 1.5px solid rgba(202, 192, 140, 0.4) !important;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1.5px solid rgba(202, 192, 140, 0.4) !important;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+  color: var(--btn-espresso) !important;
+  font-weight: 700;
+}
+
+/* ── Íconos Flotantes de la Izquierda (Dock Social Elegante) ─────────────── */
+.social-banner {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  right: auto !important;
+  transform: translateY(-50%);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--sand-gold);
+  border-radius: 36px;
+  box-shadow: 0 12px 35px rgba(56, 47, 50, 0.16);
+  z-index: 1020;
+  transition: all 0.3s ease;
+}
+
+.social-banner:hover {
+  border-color: var(--btn-espresso);
+  box-shadow: 0 16px 40px rgba(56, 47, 50, 0.24);
+}
+
+.social-icon {
+  margin: 7px 0;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(202, 192, 140, 0.4);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 3px 6px rgba(56, 47, 50, 0.12));
+}
+
+.social-icon:hover img {
+  transform: scale(1.2) translateX(4px);
+  border-color: var(--btn-espresso);
+  filter: drop-shadow(0 6px 14px rgba(56, 47, 50, 0.3));
+}
+
+@media (max-width: 768px) {
+  .social-banner {
+    left: 10px;
+    padding: 8px 5px;
+  }
+  .social-icon img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* ── Footer Costero con Acento Espresso ──────────────────────────────────── */
+footer {
+  background: rgba(245, 242, 235, 0.96) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1.5px solid var(--sand-gold);
+  text-align: left;
+  padding: 3.5rem 0 2.5rem 0;
+  margin-top: 4rem;
+  color: var(--text-muted);
+}
+
+footer h3 {
+  color: var(--btn-espresso) !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem !important;
+  position: relative;
+  display: inline-block;
+}
+
+footer h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 32px;
+  height: 2px;
+  background: var(--btn-espresso);
+  border-radius: 2px;
+}
+
+footer p {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer ul li a {
+  color: #57534e;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+footer ul li a:hover {
+  color: var(--btn-espresso);
+  transform: translateX(4px);
+}

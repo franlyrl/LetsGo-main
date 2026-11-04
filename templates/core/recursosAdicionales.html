@@ -1,0 +1,98 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Recursos Adicionales - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Recursos Adicionales</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Encuentra respuestas a las dudas más comunes sobre tu viaje a Puntarenas y Costa Rica.
+    </p>
+  </div>
+
+  <section id="preguntas-frecuentes" class="my-5">
+    <div class="accordion accordion-flush glass-panel p-0 overflow-hidden" id="faqAccordion">
+      <div class="px-4 py-3 border-bottom bg-light bg-opacity-50">
+        <h3 class="mb-0 h5"><i class="fas fa-question-circle text-info me-2"></i>Preguntas Frecuentes</h3>
+      </div>
+      
+      <!-- Pregunta 1 -->
+      <div class="accordion-item bg-transparent">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button bg-transparent fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            ¿Cuál es la mejor época para visitar Costa Rica?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            La temporada seca, de diciembre a abril, es la época más popular para visitar Costa Rica debido a su clima agradable. Sin embargo, la temporada verde, de mayo a noviembre, ofrece paisajes exuberantes y menos turistas.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item bg-transparent">
+        <h2 class="accordion-header" id="heading2">
+          <button class="accordion-button collapsed bg-transparent fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            ¿Necesito una visa para ingresar a Costa Rica?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            La mayoría de los visitantes no necesitan visa si su estadía es inferior a 90 días. Sin embargo, verifica los requisitos específicos según tu nacionalidad.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item bg-transparent">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button collapsed bg-transparent fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            ¿Qué vacunas se requieren para viajar a Costa Rica?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Las vacunas no son obligatorias, pero se recomienda estar al día con las vacunas contra tétanos, hepatitis A y B, y consultar con un profesional de la salud sobre las recomendaciones específicas para tu viaje.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="accordion-item bg-transparent">
+        <h2 class="accordion-header" id="heading4">
+          <button class="accordion-button collapsed bg-transparent fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            ¿Es seguro viajar en Costa Rica?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Costa Rica es generalmente un destino seguro para los turistas, pero como en cualquier lugar, es importante tomar precauciones básicas como cuidar tus pertenencias y mantenerse informado sobre las áreas seguras.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="accordion-item bg-transparent">
+        <h2 class="accordion-header" id="heading5">
+          <button class="accordion-button collapsed bg-transparent fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            ¿Cuáles son las opciones de hospedaje en Costa Rica?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Costa Rica ofrece una amplia variedad de opciones de hospedaje, desde hoteles y resorts de lujo hasta hostales económicos, cabañas en la selva y alojamientos en casas de familia.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+
+
+
+

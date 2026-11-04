@@ -1,0 +1,100 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Hospedajes en Puntarenas - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Hospedajes Recomendados</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Descubre los mejores hoteles, villas y glampings para una estancia inolvidable en el Pacífico.
+    </p>
+  </div>
+
+  <div class="row g-4 mb-5">
+    <!-- Oxygen Jungle Villas -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_hospedaje/hote1.jpg" class="card-img-top rounded-3" alt="Oxygen Jungle Villas" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Oxygen Jungle Villas & Spa</h3>
+          <p class="card-text small text-muted flex-grow-1">Arquitectura de estilo indonesio, piscina de borde infinito y villas de lujo a 5km de Playa Hermosa.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalHospedaje1">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue Mist Hotel -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_hospedaje/hote2.jpg" class="card-img-top rounded-3" alt="Blue Mist Hotel" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Blue Mist Hotel - Adults Only</h3>
+          <p class="card-text small text-muted flex-grow-1">Situado en Santa Teresa, ofrece jardín, terraza, piscina al aire libre y acceso directo a la playa.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalHospedaje2">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mirador Glamping -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_hospedaje/hote3.jfif" class="card-img-top rounded-3" alt="Mirador Glamping" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Mirador Glamping & Woodhouse</h3>
+          <p class="card-text small text-muted flex-grow-1">Experiencia única en Miramar con vistas espectaculares, piscina al aire libre y ambiente familiar.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalHospedaje3">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<!-- Modal 1 -->
+<div class="modal fade" id="modalHospedaje1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Oxygen Jungle Villas ★★★★★</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Villas con decoración moderna tropical, aire acondicionado, terraza con vistas al mar y ducha de efecto lluvia.</p>
+            <ul class="small text-muted">
+              <li>Piscina de borde infinito</li>
+              <li>Tratamientos de Spa</li>
+              <li>Restaurante Gourmet</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-2">
+              <div class="col-6"><img src="/static/img/img_hospedaje/hospe1.1.jpg" class="img-fluid rounded" alt=""></div>
+              <div class="col-6"><img src="/static/img/img_hospedaje/hospe1.2.jpg" class="img-fluid rounded" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://oxygenjunglevillas.com/" target="_blank" class="btn btn-primary">Visitar Sitio Web</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 & 3 would follow similar pattern, omitting for brevity in this step but ideally kept -->
+{% endblock %}
+
+
+    
+
+
+

@@ -1,0 +1,268 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  
+  <!-- Hero Header -->
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Let's Go - Guía Turística de Costa Rica</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Descubre cómo moverte por Puntarenas y el Pacífico, encuentra los mejores transportes, hospedajes y tours para vivir una experiencia inolvidable.
+    </p>
+  </div>
+
+  <!-- Carousel Frame -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-md-11">
+      <div id="carouselExampleCaptions" class="carousel slide shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/img/mediosTransp.jpeg" class="d-block w-100" alt="Transporte en Puntarenas">
+            <div class="carousel-caption">
+              <h5>Medios de Transporte</h5>
+              <p>Información completa sobre buses, taxis, tren y ferries en Puntarenas y el Golfo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/hotel.jpeg" class="d-block w-100" alt="Hospedajes">
+            <div class="carousel-caption">
+              <h5>Hospedaje en Puntarenas</h5>
+              <p>Hoteles boutique, cabinas y resorts frente a la playa y el estero.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/tour3.jpg" class="d-block w-100" alt="Tours en Costa Rica">
+            <div class="carousel-caption">
+              <h5>Tours y Aventuras</h5>
+              <p>Excursiones a Isla Tortuga, manglares y actividades acuáticas.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Access Glass Cards -->
+  <div class="row g-4 mb-5 justify-content-center">
+    <!-- Card Transporte -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4">
+        <div class="mb-3">
+          <i class="fas fa-route fa-3x" style="color: var(--costa-orange-light);"></i>
+        </div>
+        <h3 class="mb-2">Transporte</h3>
+        <p>Conoce las rutas, tarifas y horarios de buses, taxis, ferries hacia Paquera y Naranjo, y trenes.</p>
+        <div class="mt-auto pt-3">
+          <button type="button" class="btn btn-secondary me-2 btn-sm" data-bs-toggle="modal" data-bs-target="#modalTransporte">
+            Ver Opciones
+          </button>
+          <a href="/transporte/bus/" class="btn btn-primary btn-sm">Explorar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Hoteles -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4">
+        <div class="mb-3">
+          <i class="fas fa-hotel fa-3x" style="color: var(--costa-green-light);"></i>
+        </div>
+        <h3 class="mb-2">Hospedaje</h3>
+        <p>Desde resorts frente al mar hasta cómodas cabinas en el Paseo de los Turistas y San Isidro.</p>
+        <div class="mt-auto pt-3">
+          <button type="button" class="btn btn-secondary me-2 btn-sm" data-bs-toggle="modal" data-bs-target="#modalHoteles">
+            Ver Tipos
+          </button>
+          <a href="/servicios/hospedaje/" class="btn btn-primary btn-sm">Ver Hoteles</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Tours -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4">
+        <div class="mb-3">
+          <i class="fas fa-compass fa-3x" style="color: var(--costa-teal);"></i>
+        </div>
+        <h3 class="mb-2">Tours y Giras</h3>
+        <p>Descubre las islas del Golfo, avistamiento de fauna en los manglares y aventuras extremas.</p>
+        <div class="mt-auto pt-3">
+          <button type="button" class="btn btn-secondary me-2 btn-sm" data-bs-toggle="modal" data-bs-target="#modalTours">
+            Giras Clave
+          </button>
+          <a href="/servicios/tours/" class="btn btn-primary btn-sm">Ver Tours</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Highlights Section (Loaded from DB) -->
+  {% if servicios_destacados %}
+  <div class="my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="mb-1"><i class="fas fa-sparkles text-warning me-2"></i>Destacados en Puntarenas</h2>
+        <p class="mb-0">Experiencias y servicios recomendados por la comunidad</p>
+      </div>
+      <a href="/servicios/hospedaje/" class="btn btn-outline-primary btn-sm">Ver todos los servicios</a>
+    </div>
+
+    <div class="row g-4">
+      {% for item in servicios_destacados %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="badge" style="background: rgba(202, 192, 140, 0.4); color: #78350f; border: 1px solid var(--sand-gold);">
+              {{ item.get_categoria_display }}
+            </span>
+            {% if item.precio_desde %}
+            <span class="text-success font-weight-bold" style="font-size: 0.9rem;">
+              <i class="fas fa-tag me-1"></i>{{ item.precio_desde }}
+            </span>
+            {% endif %}
+          </div>
+          <h4 class="mb-2 font-weight-bold" style="color: var(--text-main) !important;">{{ item.nombre }}</h4>
+          <p class="small flex-grow-1 mb-3">{{ item.descripcion|truncatewords:20 }}</p>
+          {% if item.ubicacion %}
+          <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt text-danger me-1"></i> {{ item.ubicacion }}</p>
+          {% endif %}
+          <div class="mt-auto pt-2 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(202, 192, 140, 0.4) !important;">
+            {% if item.telefono %}
+            <a href="tel:{{ item.telefono }}" class="small text-dark font-weight-bold"><i class="fas fa-phone me-1 text-primary"></i> {{ item.telefono }}</a>
+            {% endif %}
+            {% if item.whatsapp %}
+            <a href="https://wa.me/{{ item.whatsapp|cut:' '|cut:'+'|cut:'-' }}" target="_blank" class="small text-success font-weight-bold">
+              <i class="fab fa-whatsapp me-1"></i> WhatsApp
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Sugerencias Section -->
+  <section id="sugerencias" class="my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card p-4 p-md-5">
+          <div class="text-center mb-3">
+            <i class="fas fa-comment-dots fa-2x text-info mb-2"></i>
+            <h2>¿Tienes una sugerencia o consulta?</h2>
+            <p>Tu opinión nos ayuda a mantener actualizada la guía para todos los visitantes.</p>
+          </div>
+
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+
+          <form action="{% url 'home' %}" method="post" name="Sugerencias" class="mt-2">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+              <label for="sugerencias" class="form-label">Escribe tu comentario o sugerencia:</label>
+              <textarea class="form-control" id="sugerencias" name="sugerencias" rows="4" placeholder="Escribe aquí tu opinión, ruta que te gustaría ver, o mejora para la plataforma..." required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary px-4 py-2">
+                <i class="fas fa-paper-plane me-2"></i>Enviar Sugerencia
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── Modals ──────────────────────────────────────────────────────── -->
+<!-- Modal Transporte -->
+<div class="modal fade" id="modalTransporte" tabindex="-1" aria-labelledby="modalTransporteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTransporteLabel"><i class="fas fa-bus text-info me-2"></i>Transporte en Costa Rica</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Costa Rica cuenta con un sistema de transporte público accesible para desplazarse entre ciudades y playas:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-check text-info me-2"></i><strong>Terrestre:</strong> Buses regulares hacia San José, Quepos y toda la costa.</li>
+          <li class="mb-2"><i class="fas fa-check text-info me-2"></i><strong>Marítimo:</strong> Ferries a Paquera y Playa Naranjo cruzando el Golfo de Nicoya.</li>
+          <li class="mb-2"><i class="fas fa-check text-info me-2"></i><strong>Taxis:</strong> Unidades oficiales y colectivos locales regulados.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="/transporte/bus/" class="btn btn-primary">Ver Rutas y Horarios</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Hoteles -->
+<div class="modal fade" id="modalHoteles" tabindex="-1" aria-labelledby="modalHotelesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalHotelesLabel"><i class="fas fa-hotel text-info me-2"></i>Opciones de Hospedaje</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Encuentra el lugar ideal de descanso según tu presupuesto y estilo de viaje:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Hoteles frente al mar en el Paseo de los Turistas</li>
+          <li class="mb-2"><i class="fas fa-home text-info me-2"></i>Cabinas familiares equipadas en San Isidro y El Roble</li>
+          <li class="mb-2"><i class="fas fa-anchor text-info me-2"></i>Resorts & Marina de lujo en El Cocal</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="/servicios/hospedaje/" class="btn btn-primary">Explorar Hospedajes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tours -->
+<div class="modal fade" id="modalTours" tabindex="-1" aria-labelledby="modalToursLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalToursLabel"><i class="fas fa-compass text-info me-2"></i>Giras y Excursiones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Las mejores aventuras del Golfo de Nicoya y la costa pacífica:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-ship text-info me-2"></i><strong>Isla Tortuga:</strong> Catamarán, snorkel y playa paradisíaca.</li>
+          <li class="mb-2"><i class="fas fa-tree text-success me-2"></i><strong>Manglares:</strong> Safari de avistamiento de aves y cocodrilos.</li>
+          <li class="mb-2"><i class="fas fa-water text-cyan me-2"></i><strong>Deportes Acuáticos:</strong> Motos acuáticas, kayak y paddleboard.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="/servicios/tours/" class="btn btn-primary">Ver Todos los Tours</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

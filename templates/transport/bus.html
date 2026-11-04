@@ -1,0 +1,90 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Transporte en Autobús - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Transporte en Autobús</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Consulta rutas, horarios y tarifas para moverte por Puntarenas y el Pacífico Central.
+    </p>
+  </div>
+
+  <div class="row g-4 mb-5">
+    <div class="col-lg-8">
+      <div class="card p-4 shadow-sm border-0 glass-panel">
+        <h3 class="mb-4"><i class="fas fa-bus text-warning me-2"></i>Información General</h3>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead>
+              <tr>
+                <th>Ruta</th>
+                <th>Horario</th>
+                <th>Tarifa</th>
+                <th>Frecuencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Roble</strong></td>
+                <td>6:00 AM - 9:00 PM</td>
+                <td>₡495</td>
+                <td>Cada 15 min</td>
+              </tr>
+              <tr>
+                <td><strong>Esparza</strong></td>
+                <td>5:00 AM - 10:00 PM</td>
+                <td>₡530</td>
+                <td>Cada hora</td>
+              </tr>
+              <tr>
+                <td><strong>Miramar</strong></td>
+                <td>5:45 AM - 9:45 PM</td>
+                <td>₡695</td>
+                <td>Cada hora</td>
+              </tr>
+              <tr>
+                <td><strong>Orotina</strong></td>
+                <td>5:00 AM - 8:00 PM</td>
+                <td>₡800</td>
+                <td>Cada hora</td>
+              </tr>
+              <tr>
+                <td><strong>Quepos / Jacó</strong></td>
+                <td>4:30 AM - 5:30 PM</td>
+                <td>₡3060</td>
+                <td>Cada 30 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card p-4 shadow-sm border-0 glass-panel h-100">
+        <h3 class="mb-4"><i class="fas fa-search-location text-primary me-2"></i>Buscador de Rutas</h3>
+        <form id="rutaForm">
+          <div class="mb-3">
+            <label for="lugarSalida" class="form-label">Origen</label>
+            <select class="form-select" id="lugarSalida">
+              <option value="Puntarenas">Puntarenas</option>
+              <option value="San Jose">San José</option>
+              <option value="Esparza">Esparza</option>
+              <option value="Jaco">Jacó</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="lugarLlegada" class="form-label">Destino</label>
+            <input type="text" class="form-control" id="lugarLlegada" placeholder="¿A dónde vas?">
+          </div>
+          <button type="button" class="btn btn-primary w-100 py-2 mt-3" id="buscarBtn">
+            <i class="fas fa-search me-2"></i>Buscar Ruta
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

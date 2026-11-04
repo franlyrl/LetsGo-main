@@ -1,0 +1,60 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Transporte Aéreo en Puntarenas - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Transporte Aéreo</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Conexiones rápidas y seguras entre San José, Puntarenas y los principales destinos turísticos.
+    </p>
+  </div>
+
+  <div class="glass-panel mb-5">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th colspan="4" class="text-center py-3" id="transAereo">
+              <i class="fas fa-plane me-2"></i>Horarios de Vuelos Internos
+            </th>
+          </tr>
+          <tr>
+            <th>Aerolínea</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Horarios Estimados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="/static/img/logo1.png" alt="CR Green Airways" height="30" class="me-2 rounded shadow-sm"><strong>Costa Rica Green Airways</strong></td>
+            <td><i class="fas fa-plane-departure text-muted me-2"></i>San José (SJO)</td>
+            <td><i class="fas fa-plane-arrival text-primary me-2"></i>Tambor</td>
+            <td><span class="badge bg-light text-dark border">06:40 AM</span> <span class="badge bg-light text-dark border">08:50 AM</span> <span class="badge bg-light text-dark border">10:30 AM</span> <span class="badge bg-light text-dark border">01:00 PM</span></td>
+          </tr>
+          <tr>
+            <td><strong>Costa Rica Green Airways</strong></td>
+            <td><i class="fas fa-plane-departure text-muted me-2"></i>Tambor</td>
+            <td><i class="fas fa-plane-arrival text-primary me-2"></i>San José (SJO)</td>
+            <td><span class="badge bg-light text-dark border">07:30 AM</span> <span class="badge bg-light text-dark border">09:20 AM</span> <span class="badge bg-light text-dark border">11:30 AM</span> <span class="badge bg-light text-dark border">02:00 PM</span></td>
+          </tr>
+          <tr>
+            <td><strong>Costa Rica Green Airways</strong></td>
+            <td><i class="fas fa-plane-departure text-muted me-2"></i>San José (SJO)</td>
+            <td><i class="fas fa-plane-arrival text-primary me-2"></i>Quepos</td>
+            <td><span class="badge bg-light text-dark border">08:30 AM</span> <span class="badge bg-light text-dark border">04:00 PM</span></td>
+          </tr>
+          <tr>
+            <td><strong>Costa Rica Green Airways</strong></td>
+            <td><i class="fas fa-plane-departure text-muted me-2"></i>Quepos</td>
+            <td><i class="fas fa-plane-arrival text-primary me-2"></i>San José (SJO)</td>
+            <td><span class="badge bg-light text-dark border">09:05 AM</span> <span class="badge bg-light text-dark border">04:35 PM</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

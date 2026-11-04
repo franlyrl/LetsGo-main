@@ -1,0 +1,170 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Tours y Aventuras en Puntarenas - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Tours y Aventuras</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Explora las maravillas naturales del Pacífico costarricense con nuestras excursiones recomendadas.
+    </p>
+  </div>
+
+  <div class="row g-4 mb-5">
+    <!-- Tour Corcovado -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_tour/tour-corcobado.jpg" class="card-img-top rounded-3" alt="Tour Corcovado" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Jungla de Corcovado</h3>
+          <p class="card-text small text-muted flex-grow-1">Vistas panorámicas aéreas del Parque Nacional Corcovado y la Península de Osa, el lugar más biodiverso del planeta.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalTour1">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Canopy Malpaís -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_tour/tour-conopymalpais.jpeg" class="card-img-top rounded-3" alt="Canopy Malpaís" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Canopy Malpaís</h3>
+          <p class="card-text small text-muted flex-grow-1">Adrenalina pura sobre las copas de los árboles cerca de las playas paradisíacas de la Península de Nicoya.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalTour2">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Isla Tortuga -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 shadow-sm border-0 glass-panel">
+        <img src="/static/img/img_tour/tour-islatortuga.jpg" class="card-img-top rounded-3" alt="Isla Tortuga" style="height: 220px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5 font-weight-bold">Isla Tortuga</h3>
+          <p class="card-text small text-muted flex-grow-1">Navega por las aguas tropicales del Golfo de Nicoya, disfruta de playas de arena blanca y arrecifes de coral.</p>
+          <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalTour3">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<!-- Modal 1: Corcovado -->
+<div class="modal fade" id="modalTour1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excursión Aérea Corcovado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Corcovado es mundialmente conocido como uno de los lugares con mayor biodiversidad del planeta. Embarca en una aventura aérea impresionante sobre selva tropical, lagunas ocultas y playas vírgenes.</p>
+            <h4 class="h6 mt-3">Incluye:</h4>
+            <ul class="small text-muted">
+              <li>Vuelo panorámico guiado</li>
+              <li>Avistamiento de vida silvestre</li>
+              <li>Vistas de playas de Carate</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-2">
+              <div class="col-6"><img src="/static/img/img_tour/tour1.1.jpg" class="img-fluid rounded shadow-sm" alt="T1"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour1.2.jpg" class="img-fluid rounded shadow-sm" alt="T2"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour1.3.jpg" class="img-fluid rounded shadow-sm" alt="T3"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour1.4.jpg" class="img-fluid rounded shadow-sm" alt="T4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="https://www.getyourguide.es/puerto-jimenez-l32268/excursion-aerea-por-la-selva-del-corcovado-t432331/" target="_blank" class="btn btn-primary">Reservar Ahora</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2: Canopy -->
+<div class="modal fade" id="modalTour2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Canopy Malpaís Adventure</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Recorrido de casi una milla con 11 plataformas ubicadas en árboles gigantes de entre 5 y 30 metros de altura. Vuela 300 metros sobre un cañón y disfruta la selva tropical.</p>
+            <h4 class="h6 mt-3">Detalles:</h4>
+            <ul class="small text-muted">
+              <li>11 plataformas elevadas</li>
+              <li>Cables de alta seguridad</li>
+              <li>Vistas panorámicas de la selva</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-2">
+              <div class="col-6"><img src="/static/img/img_tour/tour2.1.jpg" class="img-fluid rounded shadow-sm" alt="C1"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour2.2.jpg" class="img-fluid rounded shadow-sm" alt="C2"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour2.3.jpg" class="img-fluid rounded shadow-sm" alt="C3"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour2.4.jpg" class="img-fluid rounded shadow-sm" alt="C4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="https://www.getyourguide.es/" target="_blank" class="btn btn-primary">Reservar Ahora</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: Isla Tortuga -->
+<div class="modal fade" id="modalTour3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Catamarán Isla Tortuga</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Viaje al paraíso con arenas blancas y aguas turquesas. Incluye visita al refugio Isla Negritos para ver monos araña y delfines en su hábitat natural.</p>
+            <h4 class="h6 mt-3">Incluye:</h4>
+            <ul class="small text-muted">
+              <li>Almuerzo en club de playa</li>
+              <li>Snorkeling guiado</li>
+              <li>Barra libre de bebidas</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-2">
+              <div class="col-6"><img src="/static/img/img_tour/tour3.1.jpg" class="img-fluid rounded shadow-sm" alt="I1"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour3.2.jpg" class="img-fluid rounded shadow-sm" alt="I2"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour3.3.jpg" class="img-fluid rounded shadow-sm" alt="I3"></div>
+              <div class="col-6"><img src="/static/img/img_tour/tour3.4.jpg" class="img-fluid rounded shadow-sm" alt="I4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a href="https://www.azultravelcr.com/islatortuga.html" target="_blank" class="btn btn-primary">Reservar Ahora</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

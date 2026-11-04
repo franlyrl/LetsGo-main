@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}Crear Cuenta - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="glass-panel border-0 shadow-lg overflow-hidden p-0">
+        <div class="row g-0">
+          <!-- Columna del Formulario -->
+          <div class="col-md-6 p-4 p-lg-5">
+            <div class="mb-4">
+              <h2 class="h3 font-weight-bold mb-1">Únete a la Aventura</h2>
+              <p class="text-muted small">Crea tu cuenta para guardar tus lugares favoritos.</p>
+            </div>
+
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show small" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+            <form action="{% url 'registro' %}" method="post" class="needs-validation">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="nombre" class="form-label small">Nombre Completo</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent border-end-0"><i class="fas fa-user text-muted"></i></span>
+                  <input type="text" name="nombre" class="form-control border-start-0 ps-0" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label small">Correo Electrónico</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent border-end-0"><i class="fas fa-envelope text-muted"></i></span>
+                  <input type="email" name="email" class="form-control border-start-0 ps-0" id="email" placeholder="tu@email.com" required>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="password" class="form-label small">Contraseña</label>
+                  <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+                <div class="col-sm-6">
+                  <label for="passwordr" class="form-label small">Confirmar</label>
+                  <input type="password" name="passwordr" class="form-control" id="passwordr" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                <i class="fas fa-user-plus me-2"></i>Registrarme
+              </button>
+
+              <div class="text-center my-3 position-relative">
+                <hr class="text-muted">
+                <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 small text-muted">O regístrate con</span>
+              </div>
+
+              <div class="row g-2">
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-primary w-100 py-2 small facebook">
+                    <i class="fab fa-facebook-f me-2"></i>Facebook
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-danger w-100 py-2 small google">
+                    <i class="fab fa-google me-2"></i>Google
+                  </button>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <p class="small text-muted mb-0">¿Ya tienes cuenta? <a href="{% url 'login' %}" class="text-primary font-weight-bold">Inicia Sesión</a></p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Columna de Imagen / Carrusel -->
+          <div class="col-md-6 d-none d-md-block">
+            <div id="registerCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+              <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                  <img src="/static/img/IMG_loginyRegister/Puntarenas.jpg" class="d-block w-100 h-100 shadow-sm" style="object-fit: cover;" alt="Puntarenas">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 class="h6">Playas del Pacífico</h5>
+                    <p class="small">Descubre paisajes increíbles.</p>
+                  </div>
+                </div>
+                <div class="carousel-item h-100">
+                  <img src="/static/img/IMG_loginyRegister/monteverde.jpg" class="d-block w-100 h-100 shadow-sm" style="object-fit: cover;" alt="Monteverde">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 class="h6">Bosque Nuboso</h5>
+                    <p class="small">La biodiversidad en su esplendor.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#registerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#registerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

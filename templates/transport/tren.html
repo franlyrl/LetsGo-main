@@ -1,0 +1,62 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Transporte Ferroviario - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Transporte en Tren</h1>
+    <p class="lead text-muted" style="max-width: 700px; margin: 0 auto;">
+      Disfruta del paisaje histórico del Pacífico Central con el servicio de tren turístico.
+    </p>
+  </div>
+
+  <div class="glass-panel mb-5">
+    <div class="row align-items-center">
+      <div class="col-md-5 text-center">
+        <img src="/static/img/IMG_loginyRegister/monteverde.jpg" alt="Tren" class="img-fluid rounded shadow-lg mb-4 mb-md-0" style="max-height: 300px; object-fit: cover;">
+      </div>
+      <div class="col-md-7">
+        <h3 class="h4 mb-3"><i class="fas fa-train text-info me-2"></i>Tren Turístico del Pacífico</h3>
+        <p>El Instituto Costarricense de Ferrocarriles (INCOFER) ofrece rutas especiales y turísticas que conectan la capital con las cercanías del Pacífico.</p>
+        
+        <div class="row g-3 mt-2">
+          <div class="col-sm-6">
+            <div class="p-3 border rounded bg-light bg-opacity-50">
+              <small class="text-uppercase text-muted d-block mb-1">Origen</small>
+              <i class="fas fa-map-marker-alt text-danger me-1"></i> San José
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 border rounded bg-light bg-opacity-50">
+              <small class="text-uppercase text-muted d-block mb-1">Destino</small>
+              <i class="fas fa-map-marker-alt text-primary me-1"></i> Caldera / Puntarenas
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 border rounded bg-light bg-opacity-50">
+              <small class="text-uppercase text-muted d-block mb-1">Tarifa Est.</small>
+              <strong class="text-success">₡8,000 (Redondo)</strong>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 border rounded bg-light bg-opacity-50">
+              <small class="text-uppercase text-muted d-block mb-1">Frecuencia</small>
+              <span>Fines de semana / Especiales</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4">
+          <a href="https://incofer.go.cr" target="_blank" class="btn btn-primary">
+            <i class="fas fa-external-link-alt me-2"></i>Sitio Web Oficial
+          </a>
+          <a href="tel:+50625425800" class="btn btn-outline-primary">
+            <i class="fas fa-phone me-2"></i>Llamar Consultas
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

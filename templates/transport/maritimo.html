@@ -1,0 +1,109 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Transporte Marítimo y Ferry - Let's Go{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="text-center my-4 py-3">
+    <h1 class="princi mb-2">Transporte Marítimo</h1>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <img src="/static/img/ferry.png" alt="Ferry" style="height: 60px; width: auto;" class="me-3">
+      <p class="lead text-muted mb-0" style="max-width: 600px;">
+        Conecta Puntarenas con la Península de Nicoya a través del Golfo de Nicoya.
+      </p>
+    </div>
+  </div>
+
+  <div class="glass-panel mb-5">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th colspan="7" class="text-center py-3" id="trasnAcua">
+              <i class="fas fa-ship me-2"></i>Información General de Ferries y Botes
+            </th>
+          </tr>
+          <tr>
+            <th>Tipo</th>
+            <th>Ruta</th>
+            <th>Compañía</th>
+            <th>Horario</th>
+            <th>Adulto</th>
+            <th>Menor</th>
+            <th>Contacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge bg-primary">Ferry</span></td>
+            <td><strong>Paquera</strong></td>
+            <td>Naviera Tambor S.A.</td>
+            <td>5:30 AM - 8:30 PM</td>
+            <td><strong class="text-success">₡810</strong></td>
+            <td>₡485</td>
+            <td><i class="fas fa-phone me-1"></i>2661-2084</td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-primary">Ferry</span></td>
+            <td><strong>Playa Naranjo</strong></td>
+            <td>COONATRAMAR R.L.</td>
+            <td>6:30 AM - 5:30 PM</td>
+            <td><strong class="text-success">₡1,005</strong></td>
+            <td>₡600</td>
+            <td><i class="fas fa-phone me-1"></i>2650-0196</td>
+          </tr>
+          <tr>
+            <td><span class="badge bg-info text-dark">Bote</span></td>
+            <td><strong>Isla Chira</strong></td>
+            <td>Servicio Local</td>
+            <td>7:50 AM - 2:50 PM</td>
+            <td><strong class="text-success">₡2,000</strong></td>
+            <td>₡205</td>
+            <td><i class="fas fa-phone me-1"></i>8353-3746</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="glass-panel mb-5">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th colspan="5" class="text-center py-3" id="trasnFerry">
+              <i class="fas fa-car me-2"></i>Tarifas de Vehículos en Ferry
+            </th>
+          </tr>
+          <tr>
+            <th>Nombre Ferry</th>
+            <th>Motocicleta</th>
+            <th>Vehículo Liviano</th>
+            <th>Microbús</th>
+            <th>Autobús</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tambor / Paquera</strong></td>
+            <td>₡3,400</td>
+            <td><strong class="text-primary">₡11,400</strong></td>
+            <td>₡18,300</td>
+            <td>₡22,900</td>
+          </tr>
+          <tr>
+            <td><strong>Playa Naranjo</strong></td>
+            <td>₡3,390</td>
+            <td><strong class="text-primary">₡6,780</strong></td>
+            <td>₡16,950</td>
+            <td>₡21,470</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small text-muted mt-3 mb-0 text-center">
+      * Las tarifas no incluyen el 13% de IVA. Precios sujetos a cambios por el MOPT/ARESEP.
+    </p>
+  </div>
+</div>
+{% endblock %}

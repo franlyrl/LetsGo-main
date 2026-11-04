@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Let's Go</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body id="bodyMedios">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img src="/static/img/logo1.png" alt="logo" height="40"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="/transporte/bus/">Transporte</a></li>
+              <li class="nav-item"><a class="nav-link" href="/servicios/hospedaje/">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <span class="text-light me-3">Hola, {{ usuario.first_name|default:usuario.username }}</span>
+              <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm">Cerrar Sesión</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow p-4" style="background: rgba(255,255,255,0.95); border-radius: 15px;">
+            <h2 class="text-center mb-4 text-primary">Mi Perfil</h2>
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+            <form method="post">
+              {% csrf_token %}
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Nombre de Usuario:</label>
+                  <input type="text" class="form-control" value="{{ usuario.username }}" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Correo Electrónico:</label>
+                  <input type="email" class="form-control" value="{{ usuario.email }}" disabled>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Nombre:</label>
+                  <input type="text" name="first_name" class="form-control" value="{{ usuario.first_name }}">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Apellidos:</label>
+                  <input type="text" name="last_name" class="form-control" value="{{ usuario.last_name }}">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Teléfono:</label>
+                  <input type="text" name="telefono" class="form-control" value="{{ usuario.telefono|default:'' }}" placeholder="+506 8888-8888">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-weight-bold">Dirección:</label>
+                  <input type="text" name="direccion" class="form-control" value="{{ usuario.direccion|default:'' }}" placeholder="Puntarenas, Costa Rica">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label font-weight-bold">Biografía / Acerca de mí:</label>
+                <textarea name="biografia" class="form-control" rows="3" placeholder="Cuéntanos un poco sobre ti...">{{ usuario.biografia|default:'' }}</textarea>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4 py-2">Guardar Cambios</button>
+                <a href="/" class="btn btn-outline-secondary px-4 py-2 ms-2">Volver al Inicio</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
